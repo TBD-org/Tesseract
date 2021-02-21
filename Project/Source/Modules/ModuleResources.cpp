@@ -171,9 +171,10 @@ void ModuleResources::CheckForNewAssetsRecursive(const char* path) {
 	for (std::string& file : App->files->GetFilesInLocalFolder(path)) {
 		std::string filePath = std::string(path) + "/" + file;
 		std::string extension = App->files->GetFileExtension(file.c_str());
+		//std::string metaFilePath = assetFilePath + META_EXTENSION;
 		if (App->files->IsDirectory(filePath.c_str())) {
 			CheckForNewAssetsRecursive(filePath.c_str());
-		} else if (extension != META_EXTENSION) {
+		} else if ((extension != META_EXTENSION)) {
 			ImportAsset(filePath.c_str());
 		}
 	}
@@ -231,7 +232,8 @@ void ModuleResources::ImportAsset(const char* filePath) {
 		} else if (extension == ".jpg" || extension == ".png" || extension == ".tif" || extension == ".dds" || extension == ".tga") {
 			// Texture files
 			TextureImporter::ImportTexture(filePath, jMeta);
-		} else {
+
+		}  else {
 			assetImported = false;
 		}
 

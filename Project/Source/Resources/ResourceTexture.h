@@ -4,6 +4,7 @@
 
 #include <string>
 
+
 class ResourceTexture : public Resource {
 public:
 	ResourceTexture(UID id, const char* assetFilePath, const char* resourceFilePath);
@@ -12,5 +13,6 @@ public:
 	void Unload() override;
 
 public:
-	unsigned glTexture = 0;
+	unsigned int glTexture = 0;
+
 };

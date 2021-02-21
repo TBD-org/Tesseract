@@ -4,4 +4,5 @@
 
 namespace TextureImporter {
 	bool ImportTexture(const char* filePath, JsonValue jMeta);
-}; // namespace TextureImporter
+	bool ImportCubeMap(const char* filePath, JsonValue jMeta); // namespace TextureImporter
+} // namespace TextureImporter

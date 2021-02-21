@@ -1,4 +1,5 @@
 #include "Resource.h"
+#include "Resources/Resource.h"
 
 #include "Application.h"
 #include "Modules/ModuleTime.h"
