@@ -20,6 +20,8 @@ class ModuleDebugDraw;
 class ModuleScene;
 class ModuleTime;
 class ModuleEventSystem;
+class ModuleUserInterface;
+
 struct Event;
 class Application {
 public:
@@ -48,6 +50,7 @@ public:
 	ModuleScene* scene = nullptr;
 	ModuleTime* time = nullptr;
 	ModuleEventSystem* eventSystem = nullptr;
+	ModuleUserInterface* UI = nullptr;
 	// Application Configuration
 
 	char appName[20] = "Tesseract";

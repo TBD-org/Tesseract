@@ -15,6 +15,7 @@
 #include "Modules/ModuleScene.h"
 #include "Modules/ModuleTime.h"
 #include "Modules/ModuleEventSystem.h"
+#include "Modules/ModuleUserInterface.h"
 
 #include "SDL_timer.h"
 #include <windows.h>
@@ -34,6 +35,7 @@ Application::Application() {
 	modules.push_back(time = new ModuleTime());
 	modules.push_back(input = new ModuleInput());
 	modules.push_back(eventSystem = new ModuleEventSystem());
+	modules.push_back(UI = new ModuleUserInterface());
 	modules.push_back(camera = new ModuleCamera());
 
 	modules.push_back(scene = new ModuleScene());
